@@ -1,0 +1,106 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.Board {
+  text-align: center;
+}
+
+.movie-container {
+  margin: 0 auto;
+  width: 80%;
+  border: 1px solid #333;
+  padding: 10px 0 30px 0;
+  border-radius: 5px;
+  margin-bottom : 50px;
+  text-align: center;
+}
+
+.form-wrapper{
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title-input {
+  width: 500px;
+  height: 40px;
+  margin: 10px;
+  text-align: center;
+}
+
+.submit-button {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  padding: 20px;
+  border: none;
+  background: indianred;
+  border-radius: 5px;
+  margin-top: 40px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable) {
+  min-height: 500px;
+  text-align: center;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: white;
+  margin: 50px;
+  text-align: center;
+}
+
+/* .background {
+  background-color: white;
+  height: auto;
+  width: 90%;
+  max-width: 450px;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0px 40px 30px -20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+} */
+
+.form {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.login {
+  border: none;
+  border-bottom: 2px solid #D1D1D4;
+  background: none;
+  padding: 10px;
+  font-weight: 700;
+  transition: .2s;
+  width: 75%;
+}
+
+.login:active,
+.login:focus,
+.login:hover {
+  outline: none;
+  border-bottom-color: rgb(68, 112, 67);
+}
+
+.btn {
+  border: none;
+  width: 75%;
+  background-color: rgb(68, 112, 67);
+  color: white;
+  padding: 15px 0;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .2s;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: rgb(49, 82, 48);
+}
