@@ -26,7 +26,7 @@ function Login(props) {
           userId: id,
           userPassword: password,
         };
-        fetch("http://192.168.45.54:3001/login", { //auth 주소에서 받을 예정
+        fetch("http://localhost:3001/login", { //auth 주소에서 받을 예정
           method: "post", // method :통신방법
           headers: {      // headers: API 응답에 대한 정보를 담음
             "content-type": "application/json",
@@ -77,7 +77,7 @@ function Signin(props) {
           userPassword: password,
           userPassword2: password2,
         };
-        fetch("http://192.168.45.54:3001/signin", { //signin 주소에서 받을 예정
+        fetch("http://localhost:3001/signin", { //signin 주소에서 받을 예정
           method: "post", // method :통신방법
           headers: {      // headers: API 응답에 대한 정보를 담음
             "content-type": "application/json",
@@ -116,13 +116,13 @@ function Board() {
   const [viewContent, setViewContent] = useState([]);
 
   useEffect(()=>{
-    Axios.get('http://192.168.45.54:3001/api/get').then((response)=>{
+    Axios.get('http://localhost:3001/api/get').then((response)=>{
       setViewContent(response.data);
     })
   },[viewContent])
 
   const submitReview = ()=>{
-    Axios.post('http://192.168.45.54:3001/api/insert', {
+    Axios.post('http://localhost:3001/api/insert', {
       title: movieContent.title,
       content: movieContent.content
     }).then(()=>{
@@ -140,7 +140,7 @@ function Board() {
 
    // (1)
     const [flag, setFlag] = useState(false);
-    const imgLink = "http://192.168.45.54:3001/images/"
+    const imgLink = "http://localhost:3001/images/"
 
     const customUploadAdapter = (loader) => { // (2)
         return {
@@ -236,7 +236,7 @@ function App(props) {
   // const [mode2, setMode2] = useState("");
 
   useEffect(() => {
-    fetch("http://192.168.45.54:3001/authcheck")
+    fetch("http://localhost:3001/authcheck")
       .then((res) => res.json())
       .then((json) => {        
         if (json.isLogin === "True") {
